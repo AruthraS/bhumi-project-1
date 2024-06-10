@@ -1,5 +1,8 @@
 * {
     text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -8,11 +11,10 @@
     align-items: center;
     background: whitesmoke;
     line-height: 50px;
-    position:fixed;
     width: 100%;
     top: 0;
-    margin: 0%;
-    left: 0%;
+    left: 0;
+    padding: 0 20px;
 }
 
 .navbar ul {
@@ -24,17 +26,72 @@
     padding: 0;
 }
 
-.navbar ul li a{
+.navbar ul li a {
     text-decoration: none;
     color: black;
     margin: 0 15px;
     cursor: pointer;
 }
-
-.container{
-    color: black;
+.footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
 
-#volunteer,#donation,#aboutUs,.container{
-    margin-top: 60px ;
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 14px;
+    color: #ddd;
+    text-decoration: none;
+    line-height: 200%;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+.footer-section button{
+    background-color: blue;
+    color: white;
+    border:none;
+    padding: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    background: #222;
 }
