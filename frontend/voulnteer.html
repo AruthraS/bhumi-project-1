@@ -6,12 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-
       .container {
         max-width: 600px;
         margin: 20px auto;
@@ -63,44 +57,55 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Register as Volunteer</h1>
-      <form action="">
-        <label for="name">Name:</label>
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter your name"
-          id="name"
-          required
-        />
-        <label for="gender">Gender:</label>
-        <select id="gender" required>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
-        <label for="phone">Phone Number:</label>
-        <input
-          type="tel"
-          name="phone_number"
-          placeholder="Enter your phone number"
-          id="phone"
-          pattern="[0-9]{10}"
-          title="Please enter 10 digits"
-          required
-        />
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          id="email"
-          required
-        />
-        <label for="address">Address:</label>
-        <textarea name="address" id="address" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="voulnteer.html">Volunteer</a></li>
+      </ul>
+    </nav>
+    <section id="volunteer">
+      <h1>Volunteer Page</h1>
+      <div class="container">
+        <h1>Register as Volunteer</h1>
+        <form action="">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            id="name"
+            required
+          />
+          <label for="gender">Gender:</label>
+          <select id="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            name="phone_number"
+            placeholder="Enter your phone number"
+            id="phone"
+            pattern="[0-9]{10}"
+            title="Please enter 10 digits"
+            required
+          />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            id="email"
+            required
+          />
+          <label for="address">Address:</label>
+          <textarea name="address" id="address" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
   </body>
 </html>
