@@ -1,13 +1,16 @@
 function gaResponse(data){
-    var response = {};
-    var labels = [];
-    var values = [];
+    var response = [];
+
     for(let itr of data.rows){
-        labels.push(itr.dimensionValues[0].value);
-        values.push(itr.metricValues[0].value);
+        var obj = {};
+        itr.dimensionValues.forEach((element,index) => {
+            obj["label"+(index+1)]=element.value;
+        });
+        itr.metricValues.forEach((element, index) => {
+          obj["value" + (index + 1)] = element.value;
+        });
+        response.push(obj);
     }
-    response["labels"]=labels;
-    response["values"]=values;
     return response;
 }
 
