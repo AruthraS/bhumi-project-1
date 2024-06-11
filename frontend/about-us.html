@@ -3,9 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bhumi-ngo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset default browser styles */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .about-section {
+            background-color: rgb(247, 255, 242); /* Pista green color */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            /* justify-content: left; */
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .about-section .content {
+            flex: 1;
+            padding-right: 20px;
+            flex-direction: column;
+        }
+
+        .content h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .colo {
+            color: orange;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .our-programs {
+            padding: 40px;
+            background-color: #fff;
+            height: 100vh;
+        }
+
+        .our-programs h1 {
+            text-align: center;
+            /* margin-bottom: 40px; */
+            padding:20px;
+        }
+
+        .cards {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            padding:50px;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 10px;
+            flex: 0 1 calc(25% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .view-more a {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .view-more a:hover {
+            background-color: #555;
+        }
+
+        .heading{
+  text-align: center;
+  padding:2.5rem 0;
+}
+
+.heading span{
+  font-size: 3.5rem;
+  background:rgba(178, 180, 179, 0.008);
+  color:rgb(247, 255, 242);
+  border-radius: .5rem;
+  padding:.2rem 1rem;
+}
+
+    </style>
 </head>
 <body>
-    <h1>About-us</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+        </ul>   
+    </nav>
+    <section class="about-section">
+        <div class="content">
+            <h1>Change Today.</h1>
+            <h1 class="colo">Change Tomorrow.</h1>
+            <br/>
+            <p>Bhumi was founded on August 15, 2006 by a group of friends, who believed that every underprivileged child deserves quality education. Since then, Bhumi has transformed this conviction into a volunteering opportunity for India’s youth, launching a snowball effect of nurturing talent on the path to an educated, poverty-free India.</p>
+        </div>
+        <div class="image">
+            <img src="./images/aboutus.jfif" alt="Bhumi">
+        </div>
+    </section>
+
+    <section class="our-programs">
+        <h1 class="colo" style="color: black;">
+            OUR PROGRAMS
+        </h1>
+        <div class="cards">
+            <div class="card">
+                <img src="./images/p1.jfif" alt="Program 1">
+                <div class="card-content">
+                    <h2>Education</h2>
+                    <br/>
+                    <div class="view-more">
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/p1.jfif" alt="Program 2">
+                <div class="card-content">
+                    <h2>Catalyse</h2>
+                    <br/>
+                    <div class="view-more">
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/p1.jfif" alt="Program 3">
+                <div class="card-content">
+                    <h2>Leadership</h2>
+                    <br/>
+                    <div class="view-more">
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/p1.jfif" alt="Program 4">
+                <div class="card-content">
+                    <h2>Youth Empowerment</h2>
+                    <br/>
+                    <div class="view-more">
+                        <a href="#">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="voulnteer.html">Volunteer</a></li>
+                    </ul>   
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: contact@bhumi-ngo.org</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+            <div class="footer-section social">
+                <button>Contact Us</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Bhumi-ngo | All rights reserved
+        </div>
+    </footer>
 </body>
 </html>
