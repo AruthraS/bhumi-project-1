@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const dotenv = require('dotenv').config();
-const port = 3000;
+const port = 8000;
 
 app.use(express.json());
 app.use(
@@ -18,7 +18,7 @@ app.use("/analytics",AnalyticsRouter);
 // 
 
 // test get router
-app.length('/',(req,res)=>{
+app.use('/',(req,res)=>{
     res.send('Hello');
 })
 //
