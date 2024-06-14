@@ -17,12 +17,11 @@ const AnalyticsRouter = require("./routers/AnalyticsRouter/router");
 app.use("/analytics",AnalyticsRouter);
 // 
 
-//  testing area
-// const gaRequest = require("./mappers/gaRequest");
-
-// console.log(gaRequest({ dimensions: ["age", "name"], metrics: ["location","fggf"], dateRanges:[[1,2],["sgdf","sdfgf"]] }));
-// 
-
+// test get router
+app.length('/',(req,res)=>{
+    res.send('Hello');
+})
+//
 
 app.listen(port,() => {
     console.log(`server is running in the port :${port}`);
