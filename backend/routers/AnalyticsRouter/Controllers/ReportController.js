@@ -1,10 +1,15 @@
 const {BetaAnalyticsDataClient} = require("@google-analytics/data");
 const gaRequest = require("../../../mappers/gaRequest");
 const gaResponse = require("../../../mappers/gaResponse");
-const {property_id} = require("../../../config/ga.config");
+const {property_id,auth} = require("../../../config/ga.config");
+const path = require("path").resolve(__dirname, "../../../.env");
+require("dotenv").config({
+    path
+});
 
 async function ReportController(req,res){
-    const ga4data = new BetaAnalyticsDataClient();
+    
+    const ga4data = new BetaAnalyticsDataClient({ auth });
 
     var params = {
       property: `properties/${property_id}`
@@ -15,11 +20,14 @@ async function ReportController(req,res){
             msg: "Missing required data" 
         });
     }
-
-    const mappedData = gaRequest(req.body);
-    params = {...params,...mappedData};
-
+    if(!req.body.dimensionFilter) req.body.dimensionFilter = [];
     try{
+        req.body.dimensionFilter.push({
+          fieldName: "hostName",
+          filters: [process.env.WEBSITE_HOST],
+        });
+        const mappedData = gaRequest(req.body);
+        params = { ...params, ...mappedData };
         const [response] = await ga4data.runReport(params);
         const data = gaResponse(response);
         res.status(200).json({
