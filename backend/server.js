@@ -18,7 +18,7 @@ app.use("/analytics",AnalyticsRouter);
 // 
 
 // test get router
-app.use('/',(req,res)=>{
+app.get('/test',(req,res)=>{
     res.send('Hello');
 })
 //
