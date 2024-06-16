@@ -32,8 +32,7 @@ async function ReportController(req, res) {
     console.log(error);
     res.status(500).json({
       msg: "Internal Server Error",
-      error,
-      mappedData
+      error
     });
   }
 }
