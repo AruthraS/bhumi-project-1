@@ -19,14 +19,9 @@ async function ReportController(req, res) {
       msg: "Missing required data",
     });
   }
-  if (!req.body.dimensionFilter) req.body.dimensionFilter = [];
+  const mappedData = gaRequest(req.body);
+  params = { ...params, ...mappedData };
   try {
-    req.body.dimensionFilter.push({
-      fieldName: "hostName",
-      filters: [process.env.WEBSITE_HOST],
-    });
-    const mappedData = gaRequest(req.body);
-    params = { ...params, ...mappedData };
     const [response] = await ga4data.runRealtimeReport(params);
     const data = gaResponse(response);
     res.status(200).json({
@@ -38,6 +33,7 @@ async function ReportController(req, res) {
     res.status(500).json({
       msg: "Internal Server Error",
       error,
+      mappedData
     });
   }
 }
