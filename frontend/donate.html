@@ -4,12 +4,12 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV24TT6ZGD"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-HV24TT6ZGD');
-</script>
+        gtag('config', 'G-HV24TT6ZGD');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhumi-ngo</title>
@@ -127,14 +127,14 @@
     <div class="donation-container">
         <div class="donation-box">
             <div class="title">Donation Information</div>
-            <form action="">
+            <form action="" id="donationForm">
                 <div class="fields">
                     <input type="text" id="firstName" placeholder="First Name">
                     <input type="text" id="lastName" placeholder="Last Name">
                     <input type="text" id="email" placeholder="Email">
                 </div>
                 <div class="donate-button">
-                    <button type="submit"><a href="https://buy.stripe.com/test_bIY3eR07j40s23KaEE" style="color: white; text-decoration: none;">Donate Now</a></button>
+                    <button type="submit">Donate Now</button>
                 </div>
             </form>
         </div>
@@ -164,5 +164,6 @@
             &copy; 2024 Bhumi-ngo | All rights reserved
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
